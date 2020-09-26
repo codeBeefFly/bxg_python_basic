@@ -8,10 +8,12 @@ app = QApplication(sys.argv)
 window = QWidget()
 # 修改标题
 window.setWindowTitle('单行输入框')
+
 # 创建单行输入框
 edit = QTextEdit()
 # 展示单行输入框
 edit.setParent(window)
+
 # 展示窗口
 window.show()
 # 等待窗口停止,退出操作

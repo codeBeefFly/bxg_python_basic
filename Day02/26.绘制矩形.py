@@ -23,23 +23,23 @@ ur.move_p(pos)
 # 开启线路显示
 ur.enable_trail()
 
-# 修改坐标变成第二个点
-pos[1] += 0.3
-ur.move_p(pos)
-# 修改坐标变成第三个点
-pos[0] += 0.3
-ur.move_p(pos)
-# 修改坐标变成第四个点
-pos[1] -= 0.3
-ur.move_p(pos)
-# 修改坐标变成第一个点
-pos[0] -= 0.3
-ur.move_p(pos)
-
-
-pos_dynamic = pos
-loop_count = 0
-while loop_count < 5:
+# # 修改坐标变成第二个点
+# pos[1] += 0.3
+# ur.move_p(pos)
+# # 修改坐标变成第三个点
+# pos[0] += 0.3
+# ur.move_p(pos)
+# # 修改坐标变成第四个点
+# pos[1] -= 0.3
+# ur.move_p(pos)
+# # 修改坐标变成第一个点
+# pos[0] -= 0.3
+# ur.move_p(pos)
+#
+#
+# pos_dynamic = pos
+# loop_count = 0
+# while loop_count < 5:
 
 
 # count = 0
@@ -63,3 +63,30 @@ while loop_count < 5:
 #     ur.move_p(pos)
 #
 #     count += 1
+
+pos_origin = [0, 0, 0, 180, 0, 90]
+pos_1, pos_2, pos_3, pos_4 = pos_origin
+delta = 0.3
+
+loop_count = 0
+while loop_count < 5:
+    pos_1[0] -= delta
+    pos_1[1] += delta
+
+    pos_2[0] += delta
+    pos_2[1] += delta
+
+    pos_3[0] += delta
+    pos_3[1] -= delta
+
+    pos_4[0] -= delta
+    pos_4[1] -= delta
+
+    ur.move_p(pos_1)
+    # 开启线路显示
+    ur.enable_trail()
+    ur.move_p(pos_2)
+    ur.move_p(pos_3)
+    ur.move_p(pos_4)
+
+    loop_count += 1

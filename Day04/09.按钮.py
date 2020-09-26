@@ -8,10 +8,12 @@ app = QApplication(sys.argv)
 window = QWidget()
 # 修改标题
 window.setWindowTitle('按钮')
+
 # 创建按钮
 btn = QPushButton('开始登录')
 # 显示按钮
 btn.setParent(window)
+
 # 展示窗口
 window.show()
 # 等待窗口停止,退出操作

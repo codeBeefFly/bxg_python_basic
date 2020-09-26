@@ -24,7 +24,13 @@ def glue():
     print('获取鞋底边缘的gcode数据点')
     print('movep移动机器人,移动的时候点胶')
 
+def fun():
+    '''
+    这是未知功能
+    :return: 未知
+    '''
 
-crawl()
+crawl()  # ctrl+q 查看注释
 glue()
+fun()
 

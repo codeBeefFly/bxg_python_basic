@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QWidget,QApplication,QVBoxLayout,QPushButton
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QWidget, QApplication, QVBoxLayout, QPushButton
+# from PyQt5.QtGui import QIcon
 import sys
 
 # 创建PyQt程序(sys.argv 固定写法)
@@ -8,10 +8,12 @@ app = QApplication(sys.argv)
 window = QWidget()
 # 修改标题
 window.setWindowTitle('水平布局')
+
 # 创建布局
 layout = QVBoxLayout()
 # 设置窗口布局
 window.setLayout(layout)
+
 # 创建5个按钮
 btn1 = QPushButton('1')
 btn2 = QPushButton('2')

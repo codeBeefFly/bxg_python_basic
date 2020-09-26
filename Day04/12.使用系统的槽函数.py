@@ -3,9 +3,9 @@ from PyQt5.QtGui import QIcon
 import sys
 
 # 槽函数就是普通函数
-def func():
-    # 退出窗口
-    QApplication.quit()
+# def func():
+#     # 退出窗口
+#     QApplication.quit()
 
 # 创建PyQt程序(sys.argv 固定写法)
 app = QApplication(sys.argv)

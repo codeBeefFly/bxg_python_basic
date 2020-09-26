@@ -5,5 +5,5 @@ def cacl(a,b):
     return sum,result # 组包
 
 # result = cacl(10,20)
-a,b = cacl(10,20)
+a,b = cacl(10,20)  # 拆包
 print(a,b)

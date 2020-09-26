@@ -8,6 +8,7 @@ app = QApplication(sys.argv)
 window = QWidget()
 # 修改标题
 window.setWindowTitle('图片展示')
+
 # 创建Qlabel
 label = QLabel()
 # 创建图片的QPixmap

@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QWidget,QApplication,QPushButton
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QWidget, QApplication, QPushButton
+# from PyQt5.QtGui import QIcon
 import sys
 
 # 创建PyQt程序(sys.argv 固定写法)

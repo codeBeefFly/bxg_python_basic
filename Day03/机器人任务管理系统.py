@@ -37,7 +37,7 @@ def appendCard():
     task = input("请输入任务名:")
     type = input("请输入任务类型:")
     # 定义当前用户的任务列表
-    person = [len(l),task,type]
+    person = [len(l),task,type]  # index, task, type
     # 任务保存到系统中
     l.append(person)
 
