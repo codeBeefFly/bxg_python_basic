@@ -33,7 +33,7 @@ for box in boxes:
 
 # print(boxes)
 # print(whites)
-# TDD 开发 test driver 测试驱动开发
+# TDD 开发 test driver 测试驱动开发 test driver development
 
 # 6.把剩下的白球和其他球混合在一个再进行分配
 newL = reds+blues+whites
