@@ -48,7 +48,6 @@ class WashMachine:
         # 修改模式
         self.__mode = mode
 
-
     def __setMotorSpeed(self,speed):
         '''
         调节马达转速
@@ -56,7 +55,6 @@ class WashMachine:
         :return:
         '''
         self.__motorSpeed = speed
-
 
     def start(self):
         '''
