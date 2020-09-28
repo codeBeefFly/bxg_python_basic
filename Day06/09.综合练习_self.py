@@ -28,16 +28,21 @@
 7. 如果满足，符合条件
 """
 # date, total_days
+month_day_list = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
 while True:
     date = input('请输入日期：')
     # 判断长度
     if len(date) != 8:
         print('日期格式（yyymmdd）输入错误，请重新输入')
         continue
+    elif not date.isdecimal():
+        print('日期必须为纯数字')
+        continue
     elif date == '0':
         print('退出程序')
         break
-    # 取得 年，月，日
+    # 取得 年，月，日，要把 str -> int
     year = int(date[:4])
     month = int(date[4:6])
     day = int(date[6:])
@@ -53,7 +58,7 @@ while True:
         print('month error')
     # 判断日 (1-最大）
     # 创建天数列表，并判断是否闰年
-    month_day_list = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    # month_day_list = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     flag_leap_year = False
     if (month in [1, 3, 5, 7, 8, 10, 12]) and (day != 31):
         flag_day = False
