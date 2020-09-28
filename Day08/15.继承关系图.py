@@ -16,6 +16,6 @@ class Robot:
     pass
 gd = GrandSon()
 # 继承关系图
-# print(GrandSon.__mro__)
+print(GrandSon.__mro__)
 # Robot继承关系
-print(Robot.__mro__)
+print(Robot.__mro__)  # 类名.__mro__ 方式查看
