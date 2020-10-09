@@ -1,6 +1,7 @@
-from PyQt5.QtWidgets import QWidget,QVBoxLayout,QHBoxLayout,QPushButton
+from PyQt5.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QPushButton
 from PaintWidget import PaintWidget
 from sdk.ur import UR
+
 
 class MainWindow(QWidget):
     def __init__(self):
@@ -12,7 +13,7 @@ class MainWindow(QWidget):
         # 设置标题
         self.setWindowTitle('机器人绘制')
         # 设置窗口大小
-        self.setFixedSize(640,480)
+        self.setFixedSize(640, 480)
         # 创建整体布局
         wholeLayout = QVBoxLayout()
         # 设置布局
@@ -44,21 +45,22 @@ class MainWindow(QWidget):
         '''
         self.paintWidget.clear()
 
-    def scaleData(self,x,y):
+    def scaleData(self, x, y):
         '''
         对数据缩放处理
         :param cal:
         :return:
         '''
-        x = 0.3-0.6*x/640
-        y = -0.5+0.4*y/480
-        return x,y
+        x = 0.3 - 0.6 * x / 640
+        y = -0.5 + 0.4 * y / 480
+        return x, y
 
     def paint(self):
         '''
         调用机器人绘制
         :return:
         '''
+        self.ur.disable_trail()
         self.ur.move_j([-84.56, -87.06, -89.02, -96.33, 90.87, 89.87])
         # 获取所有的点
         points = self.paintWidget.points[::10]
@@ -68,12 +70,12 @@ class MainWindow(QWidget):
         for point in points:
             px = point['x']
             py = point['y']
-            print(px,py)
+            # print(px, py)
             # 移动 采用哪一种移动方式? movel movep
             # pose:[x,y,z,rx,ry,rz]
             # 缩放x和y
-            x, y = self.scaleData(px,py)
+            x, y = self.scaleData(px, py)
+            # print(x, y)
+            print("(px, py)::({}, {}), (x, y)::({}, {})".format(px, py, x, y))
             # x y z 单位:m
-            self.ur.move_p([x,y,0.45422,180,0,90])
-
-
+            self.ur.move_p([x, y, 0.45422, 180, 0, 90])

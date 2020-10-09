@@ -9,6 +9,7 @@ def start():
     :return:
     '''
     # 创建程序
+    # print('sys.argv::', sys.argv)  # sys.argv:: ['E:/WorkSpace/WS_python_basic/RobotPaint/main.py']
     app = QApplication(sys.argv)
     # 创建窗口
     window = MainWindow()

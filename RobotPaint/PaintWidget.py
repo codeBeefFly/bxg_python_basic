@@ -83,6 +83,7 @@ class PaintWidget(QWidget):
 
         # 创建画家
         painter = QPainter(self)
+        # painter = QPainter()
         # 创建画笔
         pen = QPen()
         # 设置画笔颜色
