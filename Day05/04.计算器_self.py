@@ -37,8 +37,11 @@ def button_click():
             display_label.setText('0')
         else:  # 计算显示的内容
             formula_line = current_content + current_text + '\n'  # 这里的 current_text 为 ‘=’ 号
-            result_line = eval(current_content)
-            display_label.setText(formula_line + str(result_line))
+            try:
+                result_line = eval(current_content)
+                display_label.setText(formula_line + str(result_line))
+            except Exception as error:
+                display_label.setText('错误：{}'.format(error))
     else:  # 正常的点击按钮，情况1：0，情况2：非0
         if current_content == '0':
             display_label.setText(current_text)
